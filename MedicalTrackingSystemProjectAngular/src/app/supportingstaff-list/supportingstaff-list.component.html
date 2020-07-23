@@ -1,0 +1,28 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Supporting Staff List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Staff Person's Name</th>
+            <th>Contact</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let supportingstaff of supportingstaffs | async">
+            <td>{{supportingstaff.ss_name}}</td>
+            <td>{{supportingstaff.ss_contact}}</td>
+            <td>{{supportingstaff.ss_type}}</td>
+            <td><button (click)="deleteSupportingStaff(supportingstaff.ss_id)" class="btn btn-danger">Delete</button>
+                <button (click)="SupportingStaffDetails(supportingstaff.ss_id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateSS(supportingstaff.ss_id)" class="btn btn-dark" style="margin-left: 10px">Update</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

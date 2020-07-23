@@ -1,0 +1,18 @@
+<h2>Supporting Staff Details</h2> 
+
+<hr/>
+<div *ngIf="supportingstaff">
+  <div>
+    <label><b>Supporting Staff's Name: </b></label> {{supportingstaff.ss_name}}
+  </div>
+  <div>
+    <label><b>Contact: </b></label> {{supportingstaff.ss_contact}}
+  </div>
+  <div>
+    <label><b>Type: </b></label> {{supportingstaff.ss_type}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Supporting Staff's List</button><br>

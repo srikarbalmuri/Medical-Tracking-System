@@ -1,0 +1,21 @@
+<h3>Update Supporting Staff</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Supporting Staff's Name</label>
+      <input type="text" class="form-control" id="ss_name" required [(ngModel)]="supportingstaff.ss_name" name="ss_name">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Contact</label>
+      <input type="text" class="form-control" id="ss_contact" required [(ngModel)]="supportingstaff.ss_contact" name="ss_contact">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Type</label>
+      <input type="text" class="form-control" id="ss_type" required [(ngModel)]="supportingstaff.ss_type" name="ss_type">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

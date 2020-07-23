@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+   
+    <li class="nav-item">
+        <a routerLink="addDoctor" class="nav-link" routerLinkActive="active">Add Doctor</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="addPatient" class="nav-link" routerLinkActive="active">Add Patient</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="addSupportingStaff" class="nav-link" routerLinkActive="active">Add Supporting Staff</a>
+  </li>
+  <li class="nav-item">
+    <a routerLink="Doctor" class="nav-link" routerLinkActive="active">Doctor's List</a>
+</li>
+<li class="nav-item">
+  <a routerLink="Patient" class="nav-link" routerLinkActive="active">Patient's List</a>
+</li>
+<li class="nav-item">
+  <a routerLink="Supporting_Staff" class="nav-link" routerLinkActive="active">Supporting_Staff's List</a>
+</li>
+
+  </ul>
+</nav>
+<div class="container">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <!-- <span>Medical Tracking System Project</span> -->
+  </div>
+</footer>

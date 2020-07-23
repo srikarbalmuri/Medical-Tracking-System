@@ -1,0 +1,18 @@
+<h2>Patient Details</h2> 
+
+<hr/>
+<div *ngIf="patient">
+  <div>
+    <label><b>Patient's Name: </b></label> {{patient.patient_name}}
+  </div>
+  <div>
+    <label><b>Patient's Contact: </b></label> {{patient.patient_contact}}
+  </div>
+  <div>
+    <label><b>Sickness Type: </b></label> {{patient.sickness_type}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Patient List</button><br>

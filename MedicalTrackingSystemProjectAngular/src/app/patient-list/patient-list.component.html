@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Patients List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Patient's Name</th>
+            <th>Patient's Contact</th>
+            <th>Sickness Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients | async">
+            <td>{{patient.patient_name}}</td>
+            <td>{{patient.patient_contact}}</td>
+            <td>{{patient.sickness_type}}</td>
+            <td><button (click)="deletePatient(patient.patient_id)" class="btn btn-danger">Delete</button>
+                <button (click)="patientDetails(patient.patient_id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updatePat(patient.patient_id)" class="btn btn-dark" style="margin-left: 10px">Update</button>
+                <button class="btn btn-success" style="margin-left: 10px">Generate Reports</button>
+                <button (click)="Billing()" class="btn btn-dark" style="margin-left: 10px">Billing Info</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
